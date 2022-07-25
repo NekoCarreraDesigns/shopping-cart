@@ -15,7 +15,7 @@
         "id": 3,
         "name": "Pineapple",
         "price": 1300,
-        "imgURL": "public/images/pineapple.jpg"
+        "imgURL": "/public/images/pineapple.jpg"
     },
     {
         "id": 4,
