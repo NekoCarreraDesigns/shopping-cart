@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export function Navbar() {
   return (
-    <NavbarBs className='bg-white shadow-sm mb-3'>
+    <NavbarBs sticky='top' className='bg-white shadow-sm mb-3'>
       <Container>
         <Nav className='me-auto'>
           <Nav.Link to={"/"} as={NavLink}>
@@ -16,7 +16,10 @@ export function Navbar() {
             About
           </Nav.Link>
         </Nav>
-        <Button style={{ width: "3rem", height: "3rem" }}>
+        <Button
+          style={{ width: "3rem", height: "3rem", position: "relative" }}
+          variant='outline-primary'
+          className='rounded-circle'>
           <svg
             version='1.1'
             xmlns='http://www.w3.org/2000/svg'
@@ -26,6 +29,17 @@ export function Navbar() {
             <path d='m212.2,422.1c-21.9,0-39.6,17.6-39.6,39.4s17.7,39.4 39.6,39.4 39.6-17.6 39.6-39.4-17.7-39.4-39.6-39.4zm0,58.1c-10.4,0-18.8-8.3-18.8-18.7s8.3-18.7 18.8-18.7 18.8,8.3 18.8,18.7-8.4,18.7-18.8,18.7z' />
             <path d='m424.9,422.1c-21.9,0-39.6,17.6-39.6,39.4s17.7,39.5 39.6,39.5 40.7-17.6 39.6-39.4c0-21.8-17.7-39.5-39.6-39.5zm18.8,39.5c0,10.4-8.3,18.7-18.8,18.7s-18.8-8.3-18.8-18.7 8.3-18.7 18.8-18.7 19.8,8.3 18.8,18.7z' />
           </svg>
+          <div
+            className='rounded-circle bg-danger d-flex justify-content-center align-items-center'
+            style={{
+              color: "white",
+              width: "1.5rem",
+              height: "1.5rem",
+              position: "absolute",
+              bottom: 1,
+              right: 1,
+              transform: "translate(31%, 31%)",
+            }}></div>
         </Button>
       </Container>
     </NavbarBs>
